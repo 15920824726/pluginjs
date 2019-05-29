@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script src="tab-jq.js"></script>
+    <script>
+        (function($){
+            $.fn.changeColor=function(d){
+                this.css('color', d);
+            }
+        })(jQuery);
+        $(document).ready(function(){
+            $("p").click(function(){
+                $(this).hide();
+            });
+            $('div').changeColor('green');
+            $('#tab').table({
+                evenRowClass:'evenRow1',
+                oddRowClass:'oddRow1',
+                curRowClass:'curRow1',
+                eventType1:'click'
+            });
+            $('#tab1').tab({
+                tabType: 'mouseover'
+            });
+        });
+    </script>
+    <style type="text/css">
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid palevioletred;
+        }
+        th,td{
+            height: 30px;
+            text-align: center;
+            border: 1px solid deeppink;
+        }
+        .evenRow1{background: yellow;}
+        .oddRow1{background: green;}
+        .curRow1{background: blue;}
+    </style>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #nav li {
+            list-style: none;
+            float: left;
+            height: 25px;
+            line-height: 25px;
+            border: 1px solid #0000FF;
+            border-bottom: none;
+            padding: 5px;
+            margin: 10px;
+            margin-bottom: 0;
+        }
+
+        #cont div {
+            width: 210px;
+            height: 150px;
+            border: 1px solid #0000FF;
+            margin-left: 10px;
+            clear: both;
+            display: none;
+        }
+
+        .active {
+            background: #AFEEEE;
+        }
+    </style>
+
+</head>
+<body>
+<p>如果你点我，我就会消失。</p>
+<p>继续点我!</p>
+<p>接着点我!</p>
+<div>hehehe</div>
+<table id="tab">
+    <tr>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>身高</th>
+        <th>体重</th>
+    </tr>
+    <tr>
+        <td>张三</td>
+        <td>22</td>
+        <td>178cm</td>
+        <td>79kg</td>
+    </tr>
+    <tr>
+        <td>美美</td>
+        <td>34</td>
+        <td>167cm</td>
+        <td>60kg</td>
+    </tr>
+    <tr>
+        <td>小青</td>
+        <td>23</td>
+        <td>170cm</td>
+        <td>55kg</td>
+    </tr>
+    <tr>
+        <td>张三</td>
+        <td>22</td>
+        <td>178cm</td>
+        <td>79kg</td>
+    </tr>
+    <tr>
+        <td>美美</td>
+        <td>34</td>
+        <td>167cm</td>
+        <td>60kg</td>
+    </tr>
+    <tr>
+        <td>小青</td>
+        <td>23</td>
+        <td>170cm</td>
+        <td>55kg</td>
+    </tr>
+    <tr>
+        <td>张三</td>
+        <td>22</td>
+        <td>178cm</td>
+        <td>79kg</td>
+    </tr>
+    <tr>
+        <td>美美</td>
+        <td>34</td>
+        <td>167cm</td>
+        <td>60kg</td>
+    </tr>
+    <tr>
+        <td>小青</td>
+        <td>23</td>
+        <td>170cm</td>
+        <td>55kg</td>
+    </tr>
+</table>
+<div id="tab1">
+    <ul id="nav">
+        <li class="active">HTML</li>
+        <li>CSS</li>
+        <li>JAVASCRIPT</li>
+    </ul>
+    <div id="cont">
+        <div style="display: block;">HTML</div>
+        <div>CSS</div>
+        <div>JAVASCRIPT</div>
+    </div>
+</div>
+</body>
+</html>

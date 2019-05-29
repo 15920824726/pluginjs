@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 从bootstrap复制的警告款样式 -->
+    <!-- <link rel="stylesheet" href="./css/layout.css">  -->
+    <!-- 或者直接用bootstrap样式 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css">
+    <script src="alert2-js.js"></script>
+</head>
+
+<body>
+<script>
+    //封装在plugin.js里面
+    window.onload = function () {
+        var oAlertSuccess = new module.popAlert({
+            content: '这是成功提示',
+            class: 'alert-success'
+        });
+        oAlertSuccess.show();
+
+        var oAlertWarning = new module.popAlert({
+            content: '这是警告提示',
+            class: 'alert-warning'
+        });
+        oAlertWarning.show();
+
+        var oAlertInfo = new module.popAlert({
+            content: '这是信息提示',
+            class: 'alert-info'
+        });
+        oAlertInfo.show();
+
+        var oAlertDanger = new module.popAlert({
+            content: '这是危险提示',
+            class: 'alert-danger'
+        });
+        oAlertDanger.show();
+
+        var oModal = new module.popModal({
+            title: '你好',
+            content: '这是模态框的内容',
+            footer:"作者：你好啊",
+            tip:"下面这个按钮点一下",
+            btn:"点我啊"
+        });
+        oModal.show();
+    }
+</script>
+</body>
+
+</html>
