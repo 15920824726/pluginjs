@@ -56,4 +56,4 @@
     };
 })(jQuery);
 
-// test1测试 可删除
+// test1测试 可删除 add function
